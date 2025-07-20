@@ -1,9 +1,9 @@
-# 📝 Notes Taker SPA
+## 📝 Notes Taker App
 
-A single-page React application to take, edit, pin, search, and delete notes with pagination, real-time search, and backend persistence using [`json-server`]/.
+A single-page React application to take, edit, pin, search, and delete notes with pagination, real-time search, and backend persistence using [`json-server`]/. 
 ---
 
-## Features
+## 🛠 Architecture & Design Features
 
 - View notes (paginated, most recently updated at the top)
 - Add notes using a modal form
@@ -61,5 +61,14 @@ npm start
 # or
 yarn start
 ```
+
+---
+
+📦 Primary Dependencies
+- React
+- axios (HTTP requests)
+- react-modal (modal for forms)
+- uuid (note IDs)
+- json-server (mock API backend)
 
 ---
