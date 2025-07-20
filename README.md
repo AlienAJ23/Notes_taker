@@ -17,21 +17,6 @@ A single-page React application to take, edit, pin, search, and delete notes wit
 
 ---
 
-## Project Structure
-src/
-components/
-Button.jsx
-NoteCard.jsx
-NotesList.jsx
-Pagination.jsx
-ModalForm.jsx
-utils/
-helpers.js
-App.jsx
-App.css
-index.js
-db.json // json-server database
-
 
 ---
 
