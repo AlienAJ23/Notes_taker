@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useEffect, useState, useMemo } from "react";
 import axios from "axios";
 import { sortNotes } from './Utils/helpers';
@@ -15,17 +14,17 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [editingNote, setEditingNote] = useState(null);
 
-  // Pagination
+  //For Pagination
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Search
+  //For Search
   const [search, setSearch] = useState("");
 
-  // Loading/Error
+  //For the Loading/Error
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // 1. LOAD NOTES FROM API
+  // Loading the Notes from Databse through API
   useEffect(() => {
     setLoading(true);
     axios.get(API_URL)
@@ -34,7 +33,6 @@ function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  // Derived notes (search + sorting + pagination)
   const filteredSortedNotes = useMemo(() => {
     let fNotes = notes.filter(n =>
       n.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -49,7 +47,7 @@ function App() {
     currentPage * NOTES_PER_PAGE
   );
 
-  // 2. CRUD OPERATIONS WITH API
+  //CRUD application using API Call
   async function handleAddNote(data) {
     setLoading(true);
     try {
@@ -106,7 +104,7 @@ function App() {
     setLoading(false);
   }
 
-  // Modal form handlers
+  // Modal form handling
   function openAddModal() {
     setEditingNote(null);
     setModalOpen(true);
