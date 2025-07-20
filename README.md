@@ -17,9 +17,6 @@ A single-page React application to take, edit, pin, search, and delete notes wit
 
 ---
 
-
----
-
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v14 or above recommended)
