@@ -62,7 +62,7 @@ npm install axios react-modal uuid
 ```bash
 npm install -g json-server
 ```
--Start json-server in a separate terminal window
+- Start json-server in a separate terminal window
 ```bash
 json-server --watch db.json --port 3001
 ```
