@@ -1,0 +1,46 @@
+{
+  "notes": [
+    {
+      "id": "ac11",
+      "title": "Homework",
+      "description": "The work is due. Finish is quickly.",
+      "updatedAt": "2025-07-20T19:41:52.219Z",
+      "pinned": false
+    },
+    {
+      "id": "b6fe",
+      "title": "Sports",
+      "description": "You are meeting your friends for football practice.",
+      "updatedAt": "2025-07-20T19:42:21.154Z",
+      "pinned": false
+    },
+    {
+      "id": "8e17",
+      "title": "Game",
+      "description": "You have a game next weekend, make sure to prepare for that.",
+      "updatedAt": "2025-07-20T21:00:31.549Z",
+      "pinned": true
+    },
+    {
+      "id": "37f8",
+      "title": "Life",
+      "description": "Take it easy. Everything will work out eventually.",
+      "updatedAt": "2025-07-20T20:15:38.492Z",
+      "pinned": false
+    },
+    {
+      "id": "1057",
+      "title": "Goal",
+      "description": "Never forget what you are grinding for.",
+      "updatedAt": "2025-07-20T20:37:49.672Z",
+      "pinned": false
+    },
+    {
+      "id": "6c79",
+      "title": "Me",
+      "description": "Just a note taker to help you manage your schedule.",
+      "updatedAt": "2025-07-20T20:17:49.643Z",
+      "pinned": false
+    }
+  ]
+}

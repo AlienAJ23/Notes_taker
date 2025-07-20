@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# 📝 Notes Taker SPA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A single-page React application to take, edit, pin, search, and delete notes with pagination, real-time search, and backend persistence using [`json-server`]/.
+---
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- View notes (paginated, most recently updated at the top)
+- Add notes using a modal form
+- Edit and delete notes
+- Pin/Unpin notes (pinned notes always at the top)
+- Real-time search by title or description
+- Pagination (5 notes per page)
+- Persist notes with a REST API powered by json-server
+- Nice loading, empty, and error states
+- Responsive layout for all screen sizes
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
+src/
+components/
+Button.jsx
+NoteCard.jsx
+NotesList.jsx
+Pagination.jsx
+ModalForm.jsx
+utils/
+helpers.js
+App.jsx
+App.css
+index.js
+db.json // json-server database
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) (v14 or above recommended)
+- npm or yarn
+- Git (to clone or pull the project)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 1. Clone the repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/your-username/notes-taker.git
+cd notes-taker
+```
+#### 2.Install dependencies
+```bash
+npm install
+npm install axios react-modal uuid
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 3.Set up the local database with json-server
+- Ensuring that you are in root folder, install json-server(if haven't installed already):
+```bash
+npm install -g json-server
+```
+-Start json-server in a separate terminal window
+```bash
+json-server --watch db.json --port 3001
+```
+- This will run your fake REST API at http://localhost:3001/notes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- While runing the script, there mind be a execution error, run the powershell as an administrator and apply this script:
+```Powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 4. Run the React app
+```bash
+npm start
+# or
+yarn start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
