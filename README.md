@@ -36,7 +36,7 @@ cd notes-taker
 #### 2.Install dependencies
 ```bash
 npm install
-npm install axios react-modal uuid
+npm install axios react-modal
 ```
 
 #### 3.Set up the local database with json-server
@@ -50,7 +50,7 @@ json-server --watch db.json --port 3001
 ```
 - This will run your fake REST API at http://localhost:3001/notes.
 
-- While runing the script, there mind be a execution error, run the powershell as an administrator and apply this script:
+- While runing the script, there might be a execution error, run the powershell as an administrator and apply this script:
 ```Powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
@@ -68,7 +68,6 @@ yarn start
 - React
 - axios (HTTP requests)
 - react-modal (modal for forms)
-- uuid (note IDs)
 - json-server (mock API backend)
 
 ---
